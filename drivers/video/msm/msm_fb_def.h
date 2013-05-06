@@ -138,6 +138,7 @@ typedef unsigned int boolean;
 #ifdef DISP_EBI2_LOCAL_DEFINE
 #define LCD_PRIM_BASE_PHYS 0x98000000
 #define LCD_SECD_BASE_PHYS 0x9c000000
+
 #define EBI2_PRIM_LCD_RS_PIN 0x20000
 #define EBI2_SECD_LCD_RS_PIN 0x20000
 

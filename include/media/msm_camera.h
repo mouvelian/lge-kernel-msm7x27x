@@ -728,6 +728,10 @@ struct msm_snapshot_pp_status {
 #define CFG_GET_ACTUATOR_INFO		35
 #define CFG_MAX			36
 
+#define CFG_SET_ISO      201
+#define CFG_SET_SCENE    202
+#define CFG_GET_ISO_SPEED  203
+
 
 #define MOVE_NEAR	0
 #define MOVE_FAR	1
@@ -1041,6 +1045,9 @@ struct sensor_cfg_data {
 	int mode;
 	int rs;
 	uint8_t max_steps;
+#if defined(CONFIG_HI351)
+	uint32_t iso_speed;
+#endif
 
 	union {
 		int8_t effect;

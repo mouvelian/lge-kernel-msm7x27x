@@ -77,7 +77,7 @@ struct msm_camera_device_platform_data {
 	struct msm_camera_io_clk ioclk;
 	uint8_t csid_core;
 	struct msm_bus_scale_pdata *cam_bus_scale_table;
-#if defined (CONFIG_MACH_MSM7X27A_U0)
+#if defined (CONFIG_MACH_MSM7X27A_U0) || defined (CONFIG_MACH_MSM7X25A_E0)
         /*LGE_CHANGE_S : seven.kim@lge.com kernel3.0 porting*/
 	/* TODO: it is needed??? */
 	int (*camera_power_on) (void);

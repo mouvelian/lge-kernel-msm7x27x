@@ -1,6 +1,8 @@
 EXTRA_CFLAGS += -Iarch/arm/mach-msm
 obj-$(CONFIG_LGE_PROC_COMM) += lge_proc_comm.o
 
+-include $(src)/Makefile.board
+
 obj-$(CONFIG_MACH_MSM7X27A_U0) += board-u0.o
 obj-$(CONFIG_MACH_MSM7X27A_U0) += board-u0-input.o
 obj-$(CONFIG_MACH_MSM7X27A_U0) += board-u0-misc.o

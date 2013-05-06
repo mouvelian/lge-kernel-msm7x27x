@@ -4,6 +4,7 @@ config MACH_LGE
 menu "LGE Device-Specific Changes"
 
 menu "LGE Board Selection"
+source "arch/arm/mach-msm/lge/Kconfig.board"
 
 config MACH_MSM7X27A_U0
     depends on ARCH_MSM7X27A

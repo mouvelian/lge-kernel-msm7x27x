@@ -662,7 +662,11 @@ static void msm_batt_update_psy_status(void)
 				 * add for Full charging
 				 * 2010-05-04 baborobo@lge.com
 				 */
+#if defined(CONFIG_MACH_MSM7X25A_E0)
+				if (battery_level == BATTERY_LEVEL_FULL || battery_soc == 100) {
+#else
 				if (battery_level == BATTERY_LEVEL_FULL) {
+#endif
 					DBG_LIMIT("BATT: FULL.\n");
 					msm_batt_info.batt_status =
 				    POWER_SUPPLY_STATUS_FULL;
@@ -740,7 +744,11 @@ static void msm_batt_update_psy_status(void)
 			 * add for Full charging
 			 * 2010-05-04 baborobo@lge.com
 			 */
+#if defined(CONFIG_MACH_MSM7X25A_E0)
+			if (battery_level == BATTERY_LEVEL_FULL || battery_soc == 100) {
+#else
 			if (battery_level == BATTERY_LEVEL_FULL) {
+#endif
 				DBG_LIMIT("BATT: FULL\n");
 				msm_batt_info.batt_status =
 					POWER_SUPPLY_STATUS_FULL;

@@ -1,0 +1,6 @@
+#
+# Inlcude the specific Kconfig file for LGE board
+#
+
+# LGE E0 Model
+source "arch/arm/mach-msm/lge/e0/Kconfig"

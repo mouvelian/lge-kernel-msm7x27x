@@ -41,5 +41,6 @@ obj-$(CONFIG_BACKLIGHT_PCF50633)	+= pcf50633-backlight.o
 obj-$(CONFIG_BACKLIGHT_LM3530) += lm3530_bl.o
 obj-$(CONFIG_BACKLIGHT_LM3528) += lm3528_bl.o
 obj-$(CONFIG_BACKLIGHT_AAT2870) += aat2870_bl.o
+obj-$(CONFIG_BACKLIGHT_BU61800) += bu61800_bl.o
 obj-$(CONFIG_SUBPMIC_LP8720) += lp8720.o
 #LGE_CHANGE_E : seven.kim@lge.com kernel3.0 porting

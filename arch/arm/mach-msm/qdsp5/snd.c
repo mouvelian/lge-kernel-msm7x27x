@@ -35,6 +35,8 @@
 #include "../lge/board-m4eu.h"
 #elif defined (CONFIG_MACH_MSM7X27A_U0)
 #include "../lge/board-u0.h"
+#elif defined (CONFIG_MACH_MSM7X25A_E0)
+#include "../lge/e0/board-e0.h"
 #endif
 
 #if defined (CONFIG_MACH_LGE)
@@ -495,7 +497,7 @@ static long snd_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
 				dev.ear_mute, dev.mic_mute);
 
 /*LGE_CHANBE_S : hoseong.kang@lge.com 2012.01.19 */
-#if defined (CONFIG_MACH_MSM7X27A_U0) ||  defined (CONFIG_MACH_MSM7X25A_M4)
+#if defined (CONFIG_MACH_MSM7X27A_U0) ||  defined (CONFIG_MACH_MSM7X25A_M4) || defined (CONFIG_MACH_MSM7X25A_E0)
 		if (dev.device == 10 || dev.device == 11)
 			fm_enable = 1;
 		else
@@ -1280,7 +1282,7 @@ static long snd_dev_enable(const char *arg)
 			dev.mic_mute);
 
 /*LGE_CHANBE_S : hoseong.kang@lge.com 2012.01.19 */
-#if defined (CONFIG_MACH_MSM7X27A_U0) || defined (CONFIG_MACH_MSM7X25A_M)
+#if defined (CONFIG_MACH_MSM7X27A_U0) || defined (CONFIG_MACH_MSM7X25A_M4) || defined (CONFIG_MACH_MSM7X25A_E0)
 	if (dev.device == 10 || dev.device == 11)
 		fm_enable = 1;
 	else
@@ -1295,7 +1297,7 @@ static long snd_dev_enable(const char *arg)
 }
 
 /*LGE_CHANBE_S : hoseong.kang@lge.com 2012.01.19 */
-#if defined (CONFIG_MACH_MSM7X27A_U0) || defined (CONFIG_MACH_MSM7X25A_M4)
+#if defined (CONFIG_MACH_MSM7X27A_U0) || defined (CONFIG_MACH_MSM7X25A_M4) || defined (CONFIG_MACH_MSM7X25A_E0)
 void snd_fm_vol_mute()
 {
 	struct snd_sys_ctxt *snd_sys = &the_snd_sys;
@@ -1384,7 +1386,7 @@ static int snd_probe(struct platform_device *pdev)
 	int rc = 0;
 
 /*LGE_CHANBE_S : hoseong.kang@lge.com 2012.01.19 */
-#if defined (CONFIG_MACH_MSM7X25A_M4)
+#if defined (CONFIG_MACH_MSM7X25A_M4) || defined (CONFIG_MACH_MSM7X25A_E0)
 	fm_enable = 0;
 #endif
 /*LGE_CHANBE_E : hoseong.kang@lge.com 2012.01.19 */

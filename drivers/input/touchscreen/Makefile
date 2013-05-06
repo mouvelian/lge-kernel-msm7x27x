@@ -73,7 +73,6 @@ obj-$(CONFIG_TOUCHSCREEN_CYTTSP_I2C)       += cyttsp-i2c.o
 obj-$(CONFIG_TOUCHSCREEN_MCS8000)	+= mcs8000_ts.o mcs8000_download.o
 obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS)	+= u0_synaptics_ts.o
 obj-$(CONFIG_TOUCHSCREEN_MELFAS_MMS136)	+= melfas_mms136_ts.o
-obj-$(CONFIG_TOUCHSCREEN_MCS8000_MMS128)	+= mcs8000_ts_mms128.o
 #LGE_CHANGE_E : seven.kim@lge.com kernel3.0 porting
 
 # LGE_CHANGES_S : download config
@@ -86,3 +85,7 @@ obj-$(CONFIG_TOUCHSCREEN_MELFAS_MMS136)	+= melfas_mms136_lgit_bin.o
 
 obj-$(CONFIG_TOUCHSCREEN_MXT140)	+= qt602240.o
 obj-$(CONFIG_TOUCHSCREEN_MELFAS_TS)	+= melfas_ts.o mcs8000_download.o  melfas_mms128_download.o
+obj-$(CONFIG_TOUCHSCREEN_MCS8000_MMS128)  += mms100_firmware_binary.o
+obj-$(CONFIG_TOUCHSCREEN_MCS8000_MMS128)  += mms100_ISC_download.o
+obj-$(CONFIG_TOUCHSCREEN_MCS8000_MMS128)  += mms100_ISP_download.o
+obj-$(CONFIG_TOUCHSCREEN_MCS8000_MMS128)  += mcs8000_ts_mms128.o

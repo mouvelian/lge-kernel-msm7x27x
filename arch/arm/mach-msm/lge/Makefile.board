@@ -1,0 +1,6 @@
+#
+# Makefile for the LGE board
+#
+
+# LGE e0 Model 
+obj-$(CONFIG_MACH_MSM7X25A_E0) += e0/

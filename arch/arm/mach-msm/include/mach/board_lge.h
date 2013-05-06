@@ -298,6 +298,9 @@ struct pp2106_platform_data {
 enum {
 	PANEL_ID_AUTO = 0,
 	PANEL_ID_LGDISPLAY = 1,
+#if defined(CONFIG_MACH_MSM7X25A_E0)
+  	PANEL_ID_TOVIS = 2,
+#endif
 };
 
 struct msm_panel_ilitek_pdata {
